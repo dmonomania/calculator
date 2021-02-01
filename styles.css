@@ -1,0 +1,76 @@
+#8ecae6 #219ebc #023047 #ffb703 #fb8500 * {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	/* vertical-align: baseline; */
+}
+
+body {
+	background-color: #8ecae6;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 95vh;
+}
+
+.calc-body {
+	-webkit-box-shadow: 13px 13px 16px -6px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 13px 13px 16px -6px rgba(0, 0, 0, 0.6);
+	box-shadow: 13px 13px 16px -6px rgba(0, 0, 0, 0.6);
+	background-color: #023047;
+	border-radius: 8px;
+	padding: 15px 10px 20px 10px;
+	width: 80vw;
+	height: 90vw;
+	max-width: 400px;
+	max-height: 550px;
+	border: 2px solid white;
+	flex: 1 1 auto;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: auto 15% 15% 15% 15% 15%;
+	grid-template-areas: "Display Display Display Display" "cancel plusminus percent divide" "seven eight nine mulitply"
+		"four five six minus" "one two three plus" "zero zero decimal equals";
+}
+
+.button {
+    font-size: 24px;
+    color: white;
+	border-radius: 5px;
+	margin: 2px;
+	background-color: #219ebc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: lightslategrey;
+}
+
+#calc-display {
+    background-color: rgba(255, 255, 255, 0.233);
+	margin: 0 0 10px 0;
+	padding: 0 15px 0px 0;
+	font-size: 70px;
+	color: white;
+	border-radius: 5px;
+	grid-area: Display;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+#calc-display-numbers {
+	vertical-align: bottom;
+}
+#zero {
+	grid-area: zero;
+}
+
+.operator {
+	background-color: #fb8500;
+}
